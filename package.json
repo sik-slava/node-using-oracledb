@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/sik-slava/node-using-oracledb#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "typescript": "^4.7.2"
   }
 }
