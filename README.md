@@ -1,2 +1,3 @@
 # node-using-oracledb
-Use node-oracledb  try/catch
+Use node-oracledb without caring about try/catch blocks. 
+Inspired by `using` construct from c#. 
