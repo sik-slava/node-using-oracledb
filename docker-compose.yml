@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    container_name: app
+    build: 
+      context: .     
+    volumes: 
+      - .:/user/src/app
+    networks: 
+      - using-oracledb
+    environment:
+      # DB_HOST: host.docker.internal
+      DB_USER: node
+      DB_PASSWORD: oracledb
+      DB_HOST: database
+      DB_PORT: 1521   
+
+  database:
+    image: wnameless/oracle-xe-11g-r2
+    container_name: database 
+    ports:
+      - 1521:1521
+    volumes:
+      - ./docker/db:/docker-entrypoint-initdb.d/
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+    networks: 
+      - using-oracledb
+
+networks: 
+    using-oracledb:  
